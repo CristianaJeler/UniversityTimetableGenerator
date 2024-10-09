@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="20mar2023-create_teaching" author="cris">
+        <createTable tableName="teachers_formations_classes">
+            <column name="id" type="varchar(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="teacher_id" type="varchar(250)"/>
+            <column name="formation_id" type="varchar(250)"/>
+            <column name="class_id" type="varchar(250)"/>
+        </createTable>
+        <addUniqueConstraint columnNames="teacher_id, class_id"
+                             constraintName="teacher_class_uk"
+                             schemaName="public"
+                             tableName="teachers_formations_classes"/>
+        <addUniqueConstraint columnNames="formation_id, class_id"
+                             constraintName="formation_class_uk"
+                             schemaName="public"
+                             tableName="teachers_formations_classes"/>
+    </changeSet>
+    <changeSet id="23may2023-change_constraints" author="cris">
+        <dropUniqueConstraint tableName="teachers_formations_classes" constraintName="teacher_class_uk"/>
+        <dropUniqueConstraint tableName="teachers_formations_classes" constraintName="formation_class_uk"/>
+        <addUniqueConstraint columnNames="formation_id, class_id, teacher_id"
+                             constraintName="teacher_formation_class_uk"
+                             schemaName="public"
+                             tableName="teachers_formations_classes"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,76 @@
+#pageContentFormations{
+    align-content: center;
+    --ion-background-color: #f3f2fd;
+}
+
+.formationsTitle{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    color: #3c0085;
+}
+
+.formationSectionTitle{
+    font-size: medium;
+    font-weight: bold;
+    color: #1d013f;
+    width: 40%;
+    margin: auto;
+}
+
+/*#addFormationBtn{*/
+/*    --ion-color-primary: #92f2fc;*/
+/*    color: #110125;*/
+/*    margin: auto;*/
+/*}*/
+#ionButtons{
+    --ion-color-primary: #92f2fc;
+    color: #110125;
+    margin-left: 45%;
+    margin-top: 1%;
+}
+
+.formationInput{
+    margin-left: 10%;
+    width: 80%;
+    text-align: center;
+}
+
+
+
+#div{
+    margin: auto;
+    height: 35%;
+    width: 70%;
+}
+
+#formationListSectionTitle{
+    margin: 4% auto 1% 45%;
+}
+
+.formationInfo{
+    margin-left: 10%;
+}
+
+.formationCode{
+    width: 15%;
+    text-align: center;
+}
+
+.yearsGroupsList{
+    min-height: 10%;
+}
+
+
+.yearsAndGroupsLabel{
+    font-size: medium;
+    font-weight: bold;
+    color: #1d013f;
+    width: 40%;
+}
+
+.yearsAndGroupsBtn{
+    --ion-color-primary: #abedff;
+    color: #1d013f;
+    margin: auto;
+}

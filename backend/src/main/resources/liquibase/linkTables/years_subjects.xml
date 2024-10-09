@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="20mar2023-create_years_subjects" author="cris">
+        <createTable tableName="years_subjects">
+            <column name="year_id" type="varchar(50)">
+                <constraints foreignKeyName="fk_yearId" referencedTableName="formations"
+                             referencedColumnNames="code"
+                             primaryKey="true" primaryKeyName="years_subjects_PK"/>
+            </column>
+            <column name="subject_id" type="varchar(50)">
+                <constraints foreignKeyName="fk_subjectId" referencedTableName="subjects" referencedColumnNames="id"
+                             primaryKey="true" primaryKeyName="years_subjects_PK"/>
+            </column>
+            <column name="type" type="integer">
+                <constraints notNullConstraintName="type_notNull"/>
+            </column>
+            <column name="semester" type="integer">
+                <constraints notNullConstraintName="semester_notNull"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

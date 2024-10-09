@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="20apr2023-create_rooms" author="cris">
+        <createTable tableName="rooms">
+            <column name="id" type="varchar(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="building_id" type="varchar(50)">
+                <constraints foreignKeyName="fk_buildingId" referencedTableName="buildings" referencedColumnNames="id"/>
+            </column>
+            <column name="capacity" type="integer">
+                <constraints notNullConstraintName="roomCapacity_notNull"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="15may2023-add_assets_columns" author="cris">
+        <sql>
+            CREATE TYPE board_types AS ENUM ('Blackboard', 'Magnetic', 'Smart', 'Whiteboard', 'Interactive', 'None');
+            CREATE TYPE devices AS ENUM ('Laptops', 'VR headsets', 'VR', 'Computers', 'Desktops', 'None');
+        </sql>
+        <addColumn tableName="rooms">
+            <column name="boards" type="board_types[]">
+                <constraints checkConstraint="CHECK(board IN ('blackboard', 'magnetic', 'smart', 'none'))" nullable="true"/>
+            </column>
+        </addColumn>
+        <addColumn tableName="rooms">
+            <column name="devices" type="devices[]" defaultOnNull="true"/>
+        </addColumn>
+        <addColumn tableName="rooms">
+            <column name="projector" type="int">
+                <constraints checkConstraint="CHECK(projector IN (0, 1))"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="15may2023-add_code_column" author="cris">
+        <addColumn tableName="rooms">
+            <column name="code" type="varchar(20)">
+                <constraints uniqueConstraintName="room_code_uk" nullable="true" unique="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet id="15may2023-add_description_column" author="cris">
+        <addColumn tableName="rooms">
+            <column name="description" type="varchar(100)">
+            </column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="14mar2023-create_studentsFormations" author="cris">
+        <createTable tableName="students_formations">
+            <column name="students_id" type="varchar(250)">
+                <constraints foreignKeyName="fk_student"
+                             referencedTableName="students"
+                             referencedColumnNames="id"
+                             primaryKey="true" primaryKeyName="formations_students_PK"/>
+            </column>
+            <column name="formation_id" type="varchar(250)">
+                <constraints foreignKeyName="fk_formation"
+                             referencedTableName="formations"
+                             referencedColumnNames="code"
+                             primaryKey="true" primaryKeyName="formations_students_PK"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

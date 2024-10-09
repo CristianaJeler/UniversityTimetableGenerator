@@ -1,0 +1,48 @@
+#profilePic{
+    width: 400px;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    border-style: double;
+    border-color: #3c0085;
+}
+#profilePic:hover{
+    opacity: 40%;
+    cursor: pointer;
+}
+
+.settingsForm{
+    width: 75%;
+    float: right;
+    display: inline-block;
+    height: calc(100% - 65px);
+}
+.settingsOptions{
+    width: 20%;
+    display: inline-block;
+    --ion-color-base: #2b025d;
+}
+.settingsOption:hover{
+    --ion-background-color: rgb(223, 252, 249);
+    cursor: pointer;
+    color: #3c0085;
+}
+
+.settingsInput{
+    color: #2b025d;
+    --ion-color-base: #2B025DFF;
+}
+
+.updateBtn{
+    background-color: #2B025DFF;
+    --ion-color-primary: transparent;
+    border-radius: 10%;
+    float: right;
+    margin-right: 2%;
+}
+
+.formTitle{
+    color: #2b025d;
+    font-weight: bold;
+    min-height: 3em;
+}

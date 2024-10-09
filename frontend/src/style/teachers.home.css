@@ -1,0 +1,46 @@
+#contentPage{
+   --ion-background-color: rgb(238, 237, 255);
+}
+
+.cardTeacherHome{
+   /*--ion-background-color: white;*/
+   /*width: 30%;*/
+   /*margin-right: auto;*/
+   /*margin-left: auto;*/
+   --ion-background-color: white;
+   border-radius: 10% !important;
+   max-width: 25% !important;
+   height: 50%;
+   align-content: center;
+   display: inline-flex;
+   justify-content: center;
+   margin: 5% auto auto;
+}
+
+.cardTeacherHome:hover{
+   cursor: pointer;
+   opacity: 80%;
+   scale: 110%;
+}
+
+.cardImg{
+   min-height: 100px;
+   min-width: 100px;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.ion-text-center{
+   color: #3c0085;
+   font-weight: bold;
+}
+
+#grid{
+   height: 100%;
+
+}
+
+#row{
+   display: block;
+   vertical-align: middle;
+}

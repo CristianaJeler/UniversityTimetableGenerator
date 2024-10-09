@@ -1,0 +1,30 @@
+#footer{
+    --ion-background-color: rgb(112, 72, 187);
+    /*position:absolute;*/
+    /*width: 100%;*/
+    --ion-color-base: #ffffff;
+    /*bottom: 0;*/
+    /*height: 100px;*/
+    text-align: center;
+}
+
+
+.footerSocialIcon{
+    width: 20px;
+    height: 20px;
+}
+
+.footerSocialIcon:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.appName{
+    color: #ffffff;
+    font-family: Ravie, serif;
+}
+
+#footerTitle{
+    font-size: medium;
+}
+

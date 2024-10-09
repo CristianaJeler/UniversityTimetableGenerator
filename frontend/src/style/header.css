@@ -1,0 +1,40 @@
+#img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    /*display: inline-block;*/
+    /*margin-top: 0.5%;*/
+    margin-left: 1%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#img:hover{
+    cursor: pointer;
+}
+
+#logoutBtn:hover{
+    --ion-color-base: #5a0505;
+    cursor: pointer;
+}
+
+#header{
+    /*--ion-background-color: #3c0085;*/
+    --ion-background-color: #7048bb;
+}
+
+#signupBtn{
+    background-color: #60fcf6;
+    border-radius: 5%;
+    color: #3c0085;
+}
+
+#loginBtn{
+    color: #60fcf6;
+}
+
+#logoutBtn{
+    background-color: #60fcf6;
+    border-radius: 5%;
+    color: #3c0085;
+}

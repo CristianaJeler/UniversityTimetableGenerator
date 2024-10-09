@@ -1,0 +1,78 @@
+.actionCardGenerator {
+    --ion-background-color: white;
+    border-radius: 10% !important;
+    max-width: 25% !important;
+    height: 80%;
+    align-content: center;
+    vertical-align: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 4%;
+    margin-left: 16%;
+}
+
+.actionCardGenerator:hover {
+    opacity: 80%;
+    scale: 110%;
+}
+
+#contentPage {
+    place-content: center;
+}
+
+#tableHeader {
+    text-align: center;
+    border: #bfbfc0 solid 1px;
+    border-collapse: collapse;
+    background: #cfced0;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.timetableRow {
+    text-align: center;
+    border: #bfbfc0 outset 1px;
+    border-collapse: collapse;
+}
+
+.generatorButton {
+    --ion-color-primary: #abedff;
+    color: #1d013f;
+}
+
+#ionButtonsGenerator {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 3%;
+}
+
+#timetable {
+    width: 95%;
+    margin: auto;
+    min-height: 90%;
+    border-collapse: collapse;
+}
+
+#progressBar {
+    --ion-color-primary: #1d013f;
+    width: 100%;
+}
+
+
+.progressRow{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin-bottom: 1%;
+}
+
+.progressGrid{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 5%;
+}

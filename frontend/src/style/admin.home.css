@@ -1,0 +1,22 @@
+#pgContentAdmin {
+    --ion-background-color: rgb(238, 237, 255);
+}
+
+.actionCardAdmin {
+    --ion-background-color: white;
+    border-radius: 10% !important;
+    max-width: 15% !important;
+    height: 51%;
+    align-content: center;
+    vertical-align: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: 4%;
+}
+
+.actionCardAdmin:hover{
+    cursor: pointer;
+    opacity: 80%;
+    scale: 150%;
+}

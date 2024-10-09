@@ -1,0 +1,173 @@
+.numberInput{
+    display: inline-block;
+    width: 40px;
+    /*border: #2b025d 1px solid;*/
+    height: 10%;
+    /*border-radius: 20%;*/
+}
+
+.timeInput{
+    display: inline-block;
+    height: 50px;
+}
+
+.cardTitle {
+    text-align: center;
+    color: #550fa9;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.availabilityCard{
+    color: black;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    background-color: #ebfaf9;
+    margin: auto;
+}
+
+.mainTitle{
+    text-align: center;
+    height: 4%;
+    font-weight: bold;
+    font-size: x-large;
+    color: #3c0085;
+}
+
+.cardSubtitle{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: medium;
+    color: #8b57c9;
+    font-weight: bold;
+}
+
+.addIntervalBtn{
+    height: max-content;
+    width: max-content;
+    --ion-color-primary: #8b57c9;
+}
+
+.grid{
+    max-width: 90%;
+    width:100%;
+    text-align: center;
+    margin: auto;
+}
+
+.select{
+    border: 1px solid #2b025d;
+    color: #3c0085;
+    border-radius: 5%;
+}
+
+.assetsCheckbox{
+    margin-right: 5%;
+    --ion-color-primary: #8b57c9;
+}
+
+.secondaryTitle{
+    margin-bottom: 1%;
+    margin-top: 2%;
+    color: #3c0085;
+    font-weight: bold;
+}
+
+.label{
+    margin-right: 10px;
+}
+
+#submitBtn{
+    --ion-color-primary: #b4fcfc;
+    color: #2b025d;
+    float: right;
+    margin-top: 2%;
+}
+
+#pageContent{
+    /* Height of the footer */
+    height: 100%;
+}
+
+#preferredRoomsList{
+    max-height:150px;
+    min-height:150px;
+    --border-width: 0;
+}
+
+.roomsCheckboxes{
+    /*display: flex;*/
+    /*align-items: center;*/
+    vertical-align: middle;
+    position: relative;
+    --ion-color-primary: #8b57c9;
+}
+
+.roomsTitles{
+    display: flex!important;
+    align-content: center!important;
+    align-items: center!important;
+    color: #7a46b9;
+}
+
+.intervalsCheckbox{
+    --ion-color-primary: #8b57c9;
+}
+
+.timeIntervalsRow{
+    width: 95%;
+}
+
+.availabilityDayCol{
+ max-width: 20%;
+}
+.availabilityTextCol{
+max-width: 25%;
+}
+
+.availabilityInfoCol{
+max-width: 55%;
+    text-align: center;
+}
+#intervalsList{
+    max-width: 50%;
+    margin: auto;
+}
+
+.preferencesSectionTitle{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#roomsPrefsList{
+    max-width: 90%;
+    margin: auto;
+}
+
+
+.roomPrefsRow {
+    width: 100%;
+}
+
+.roomPrefsSubject{
+max-width: 20%;
+}
+.roomPrefsClass{
+    max-width: 15%;
+
+}
+.roomPrefsRooms{
+    max-width: 20%;
+}
+.roomPrefsDevices{
+    max-width: 20%;
+}
+.roomPrefsBoards{
+    max-width: 20%;
+}
+.roomPrefsProjector{
+    max-width: 10%;
+}

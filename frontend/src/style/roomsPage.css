@@ -1,0 +1,95 @@
+#pageContentRooms {
+    --ion-background-color: #fefdff;
+    text-align: center;
+}
+
+.radioInput {
+    width: 50%;
+}
+
+#projectorLabel {
+    max-width: 30% !important;
+    float: left;
+}
+
+#radioGroup {
+    width: 70%;
+    margin: auto;
+}
+
+#addRoomBtn {
+    --ion-color-primary: #d2fdfc;
+    color: #1d013f;
+}
+
+.searchedSubject {
+    width: 60%;
+    margin: auto;
+}
+
+.roomCode {
+    margin-right: 40px;
+    width: 20%;
+}
+
+.mainTitleRooms {
+    color: #1d013f;
+    text-align: center;
+    height: 10%;
+}
+
+#roomsList {
+    height: 50%;
+    border: 1px darkgrey inset;
+    width: 95%;
+    /*margin-left: 10%;*/
+    margin: auto;
+}
+
+#buildingGrid {
+    height: 90% !important;
+}
+
+#buildingsSelect {
+    width: 70%;
+    margin: auto;
+    border: 1px darkgrey inset;
+}
+
+.openAddModalBtn {
+
+    --ion-color-primary: #3c0085;
+}
+
+#addRoomBtn {
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+.categTitle {
+    color: #1d013f;
+    font-size: large;
+    font-weight: bold;
+}
+
+.toolbarBuildings {
+    text-align: center;
+    width: 95%;
+    margin: 2% auto auto;
+}
+
+.searchedRoom {
+    width: 80%;
+    margin: auto;
+}
+
+.roomInput {
+    width: 80%;
+    --ion-color-primary: #3c0085;
+    color: #1d013f;
+    margin: 1% auto auto;
+}
+
+#roomModalContent{
+    min-height: 95%;
+}

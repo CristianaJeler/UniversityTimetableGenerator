@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="14mar2023-create_subjects" author="cris">
+        <createTable tableName="subjects">
+            <column name="id" type="varchar(250)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="code" type="varchar(250)">
+                <constraints unique="true" uniqueConstraintName="code_Unique"/>
+            </column>
+            <column name="name" type="varchar(100)">
+                <constraints notNullConstraintName="name_notNull"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

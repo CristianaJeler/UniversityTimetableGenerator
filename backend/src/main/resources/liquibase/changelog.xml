@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+<!--   MAIN TABLES -->
+    <include file="/liquibase/mainTables/formations.xml"/>
+    <include file="/liquibase/mainTables/students.xml"/>
+    <include file="/liquibase/mainTables/subject.xml"/>
+    <include file="/liquibase/mainTables/classes.xml"/>
+    <include file="/liquibase/mainTables/user.xml"/>
+    <include file="/liquibase/mainTables/buildings.xml"/>
+    <include file="/liquibase/mainTables/rooms.xml"/>
+    <include file="/liquibase/mainTables/days.xml"/>
+    <include file="/liquibase/mainTables/timetable.xml"/>
+
+<!--    LINK TABLES -->
+    <include file="/liquibase/linkTables/years_subjects.xml"/>
+    <include file="/liquibase/linkTables/students_formations.xml"/>
+    <include file="/liquibase/linkTables/teaching_assignments.xml"/>
+    <include file="/liquibase/linkTables/time_availability.xml"/>
+    <include file="/liquibase/linkTables/room_preferences.xml"/>
+
+</databaseChangeLog>

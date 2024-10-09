@@ -1,0 +1,99 @@
+#pgContentSubjects{
+    --ion-background-color: rgb(241, 241, 252);
+}
+
+.mainTitle{
+    text-align: center;
+    height: 4%;
+    font-weight: bold;
+    font-size: x-large;
+    color: #3c0085;
+}
+
+.secondaryTitle{
+    margin-bottom: 1%;
+    margin-top: 2%;
+    color: #3c0085;
+    font-weight: bold;
+    text-align: center;
+}
+
+#addSubjectModal{
+    --height: 40%;
+    --width: 30%;
+    text-align: center;
+}
+
+.subjectsModalContent{
+    border-radius: 20%;
+}
+
+.subjectInput{
+    max-width: 90%;
+    margin: 8% auto auto;
+    --ion-background-color: #edebfd;
+}
+
+#addSubjectBtn{
+    --ion-color-primary: #5deeee;
+    margin-top: 5%;
+    color: #2b025d;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#searchbar{
+    width: 70%;
+    display: inline-block;
+    color: #2b025d;
+}
+
+#ionButtons{
+    display: inline-block;
+    background-color: rgba(92, 248, 235, 0.51);
+    border-radius: 20%;
+    color: #2b025d;
+
+}
+
+#openAddModalBtn{
+    vertical-align: middle;
+}
+
+.searchedSubject{
+    width: 60%;
+    margin: auto;
+}
+
+.checkboxItem{
+    width: 50%;
+    display: inline-block;
+}
+.checkboxDiv{
+    width: 50%;
+    margin: auto;
+}
+
+#searchSubjectsTitle{
+    color: grey;
+}
+
+.subjectName{
+    margin: auto;
+    text-align: center;
+    color: #2b025d;
+    font-weight: bold;
+}
+
+.subjectCode{
+    color: #1d013f;
+}
+.subjectType{
+    font-weight: bold;
+}
+
+.subjectEditIcon:hover{
+    cursor: pointer;
+}
+
+

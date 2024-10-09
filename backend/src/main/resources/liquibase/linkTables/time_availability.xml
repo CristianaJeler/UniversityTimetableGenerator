@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="16may2023-timeAvailability" author="cris">
+        <createTable tableName="time_availability">
+            <column name="teacher_id" type="varchar(50)">
+                <constraints foreignKeyName="fk_teacher_availability"
+                             referencedTableName="users"
+                             referencedColumnNames="user_id"
+                             primaryKey="true"
+                             primaryKeyName="teacher_days_availability_PK"/>
+            </column>
+            <column name="day_id" type="integer">
+                <constraints foreignKeyName="fk_day_availability"
+                             referencedTableName="days"
+                             referencedColumnNames="id"
+                             primaryKey="true"
+                             primaryKeyName="teacher_days_availability_PK"/>
+            </column>
+            <column name="available_all_day" type="integer">
+                <constraints checkConstraint="CHECK(available_all_day IN (0,1))"/>
+            </column>
+            <column name="time_intervals" type="int[]"/>  <!-- code time intervals with numbers like 1 - 08:00-10:00 -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1jun2023-addMaxNoOfHours" author="cris">
+        <addColumn tableName="time_availability">
+           <column name="max_hours" type="integer"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="15may2023-roomPreferences" author="cris">
+        <createTable tableName="room_preferences">
+            <column name="teacher_id" type="varchar(50)">
+                <constraints foreignKeyName="fk_teacher_room_preferences"
+                             referencedTableName="users"
+                             referencedColumnNames="user_id"
+                             primaryKey="true" primaryKeyName="teacher_rooms_prefs_PK"/>
+            </column>
+            <column name="class_id" type="varchar(50)">
+                <constraints foreignKeyName="fk_class_room_preferences"
+                             referencedTableName="classes"
+                             referencedColumnNames="id"
+                             primaryKey="true" primaryKeyName="teacher_rooms_prefs_PK"/>
+            </column>
+            <column name="preferred_rooms" type="varchar[]"/>
+            <column name="preferred_boards" type="board_types[]"/>
+            <column name="preferred_devices" type="devices[]"/>
+            <column name="wants_projector" type="integer">
+                <constraints checkConstraint="CHECK(wants_projector IN (0, 1))"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1jun2023-addBuildingPreferences" author="cris">
+        <addColumn tableName="room_preferences">
+            <column name="preferred_buildings" type="varchar[]"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

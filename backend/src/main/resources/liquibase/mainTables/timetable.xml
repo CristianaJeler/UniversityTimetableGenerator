@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="08jun2023" author="cris">
+        <createTable tableName="timetable">
+            <column name="id" type="varchar(250)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="teacher" type="varchar(250)"/>
+            <column name="subject_name" type="varchar(100)"/>
+            <column name="class_type" type = "varchar(11)"/>
+            <column name="formation" type="varchar(30)"/>
+            <column name="room" type="varchar(30)"/>
+            <column name="day" type="integer"/>
+            <column name="time" type="integer"/>
+            <column name="week" type="integer"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

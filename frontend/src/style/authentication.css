@@ -1,0 +1,81 @@
+*{
+    font-family: "Tahoma", sans-serif;
+}
+#auth_page{
+    --ion-background-color:linear-gradient(90deg,
+    hsl(246, 100%, 86%) 10%,
+    hsl(246, 94%, 86%) 30%,
+    hsl(247, 89%, 93%) 40%,
+    hsl(247, 82%, 94%) 50%);
+}
+.auth_input{
+    margin: 2% auto;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    border-radius: 5%;
+    height: 7%;
+    border:solid #3c0085 2px;
+    color: #3c0085;
+}
+#authButton{
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    max-width: 25%;
+    background-color: #3c0085;
+    border-radius: 5%;
+}
+
+#authButton:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+
+#link{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30%;
+    text-align: center;
+    border-radius: 5%;
+    color: #3c0085;
+}
+#link:hover{
+    cursor: pointer;
+    color: #614188;
+}
+
+#auth_grid{
+    margin: 2% auto;
+    height: 85%;
+    width: 60%;
+    --ion-background-color: hsl(228, 100%, 91%) 10%;
+}
+
+.icon{
+margin-left: 5px;
+}
+
+.selectOption{
+min-width: 90% !important;
+}
+
+
+/* LOGIN */
+#login_card{
+    margin:9% auto 9%;
+    height: 50%;
+    width: 50%;
+    background-color: hsl(228, 100%, 91%);
+    border: 1px solid #3c0085;
+}
+
+.login_input{
+    margin: 5% auto;
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    border-radius: 5%;
+    height: 15%;
+    border:solid #3c0085 2px;
+    color: #3c0085;
+}

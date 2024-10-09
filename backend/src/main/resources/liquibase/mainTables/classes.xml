@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="20mar2023-create_classes" author="cris">
+        <createTable tableName="classes">
+            <column name="id" type="varchar(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="subject_id" type="varchar(50)">
+                <constraints foreignKeyName="fk_subjectId"
+                             referencedTableName="subjects"
+                             referencedColumnNames="id"/>
+            </column>
+            <column name="class_type" type="integer">
+                <constraints notNullConstraintName="classType_notNull"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="11apr2023-add_frequency" author="cris">
+        <addColumn tableName="classes">
+            <column name="frequency" type="integer">
+                <constraints notNullConstraintName="frequency_notNull"/>
+            </column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>
